@@ -22,6 +22,9 @@
                 {
                     Console.WriteLine($"Welkom {user}!");
                 }
+                tries++;
+                Console.WriteLine($"Foutieve login.\n {3 - tries} pogingen over.");
+            }
             }
         }
     }
