@@ -3,15 +3,26 @@
     internal class Program
     {
         static void Main(string[] args)
-        {
-            string username;
-            string wachtwoord;
+        {            
+            string usernameInput;
+            string passwordInput;
 
-            Console.Write("Gebruikersnaam: ");
-            username = Console.ReadLine();
+            const string user = "SXC0118T", password = "Wachtwoord123!";
+            int tries = 0;
+            while (tries < 3)
+            {
 
-            Console.Write("Wachtwoord: ");
-            wachtwoord = Console.ReadLine();
+                Console.Write("Gebruikersnaam: ");
+                usernameInput = Console.ReadLine();
+
+                Console.Write("Wachtwoord: ");
+                passwordInput = Console.ReadLine();
+
+                if (usernameInput == user && passwordInput == password)
+                {
+                    Console.WriteLine($"Welkom {user}!");
+                }
+            }
         }
     }
 }
